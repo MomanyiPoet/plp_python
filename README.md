@@ -152,3 +152,20 @@ Can also be created without using parentheses:
 > print("Set Symmetric Difference is: ", A ^ B)
 
 ![Alt text](images/set2.png)
+
+
+#### 5. String
+> use single quotes or double quotes to represent a string in Python
+
+> Python, strings are immutable. That means the characters of a string cannot be changed.
+
+- String Formatting
+> name = 'Cathy'
+
+> country = 'UK'
+
+> print(f"{name} is from{country}")
+
+## Escape Sequences
+
+![Alt text](images/escape.png)
