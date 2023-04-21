@@ -5,10 +5,10 @@ This program is about:
 
 > Python is a high-level programming language designed to be highly readable. It uses English like statements and keywords to create a software. It is a multipurpose programming language in that it can be used for web development, creating mobile applications, hacking, automation, machine learning and data science.
 
-## Variables in Python
+## VARIABLES IN PYTHON
 > Python is a type-inferred language, so you don't have to explicitly define the variable type.
 
-## Python Datatypes
+## PYTON DATATYPES
 1. Numeric Data type
     <ul>
         <li>int - holds signed integers of non-limited length.</li>
@@ -33,7 +33,7 @@ This program is about:
 
 6. Set Data type
 
-## Type Conversion
+## TYPE CONVERSION
 > It is converting data from one type to another.
 There are two types of type conversion
 <ul>
@@ -41,14 +41,14 @@ There are two types of type conversion
     <li>Explicit Conversion - manual type conversion
 </ul>
 
-## Comments in Python
+## COMMENTS IN PYTHON
 > In Python, there are two types of comments:
 <ul>
     <li>single-line comment
     <li>multi-line comment
 </ul>
 
-## Basic operations
+## BASIC OPERATIONS
 <ul>
     <li>Arithmetic operators
     <li>Assignment Operators
@@ -58,7 +58,7 @@ There are two types of type conversion
     <li>Special Operators
 </ul>
 
-## Printing Output and Collecting User Input
+## PRINTING OUTPUT AND COLLECTIONG USER INPUT
 
 #### 1. Input formatting
 > name = str(input("What is your name: ")) <br>
@@ -68,7 +68,7 @@ location = str(input("What is your location: "))
 #### 2. Output formatting
 > print("Hello {}, you are {} years old and live in {}.".format(name, age, location))
 
-## Data Structures
+## DATA STRUCTURES
 
 ![Alt text](images/data_structures.png)
 
@@ -169,3 +169,15 @@ Can also be created without using parentheses:
 ## Escape Sequences
 
 ![Alt text](images/escape.png)
+
+## CONDITIONAL STATEMENTS
+
+1. if statement
+2. if...else statement
+3. if...elif...else statement
+
+## LOOPS
+1. for loop
+![Alt text](images/for-loop.png)
+2. while loop
+![Alt text](images/while-loop.png)
