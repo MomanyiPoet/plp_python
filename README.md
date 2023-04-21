@@ -181,3 +181,13 @@ Can also be created without using parentheses:
 ![Alt text](images/for-loop.png)
 2. while loop
 ![Alt text](images/while-loop.png)
+
+## LIST COMPREHENSION
+> numb1 = [2, 4, 6, 8]
+
+> double = [i ** 2 for i in numb1]
+
+> print(double)
+
+## FUNCTIONS
+![Alt text](images/functions.png)
