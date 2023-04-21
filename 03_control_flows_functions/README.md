@@ -11,7 +11,7 @@ Create a method that tests whether the result of taking the power of one number 
 - If base raised to the exponent is greater than 5000, return True, otherwise return False
 
 ## 2.Divisible By Ten
-Create a function that determines whether or not a number is divisible by ten. A number is divisible by ten if the remainder of the number divided by 10 is 0. Using this, we can complete this function in a few steps:
+Create a function that determines whether or not a number is divisible by ten. A number is divisible by ten if the remainder of the number divided by 10 is 0. Using this, we can complete this function in a few steps
 
 - Define the function header to accept one input num
 - Calculate the remainder of the input divided by 10 (use modulus)
