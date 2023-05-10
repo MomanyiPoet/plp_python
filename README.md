@@ -191,3 +191,19 @@ Can also be created without using parentheses:
 
 ## FUNCTIONS
 ![Alt text](images/functions.png)
+
+## OBJECT ORIENTED PROGRAMMING
+> Object-Oriented Programming (OOP) is a programming paradigm in computer science that relies on the concept of classes and objects. It is used to structure a software program into simple, reusable pieces of code blueprints (usually called classes), which are used to create individual instances of objects.
+
+
+- Four Principles of OOP
+1. Inheritance: child classes inherit data and behaviors from the parent class
+2. Encapsulation: containing information in an object, exposing only selected information
+3. Abstraction: only exposing high-level public methods for accessing an object
+4. Polymorphism: many methods can do the same task
+
+- Building blocks of OOP
+1. Classes - a blueprint of an object
+2. Objects - an instance of a class
+3. Methods - methods represent behaviors
+4. Attributes - information to be stored in a class about an object
