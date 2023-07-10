@@ -6,7 +6,8 @@
     <title>UTAWALA SERVICE GARAGE MANAGEMENT SYSTEM</title>
 
     <!-- Template CSS -->
-    <link rel="stylesheet" href="../static/css/style-starter.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style-starter.css' %}">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:400,700,700i&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
@@ -96,9 +97,9 @@
         </div>
     </section>
 
-<script src="../static/js/jquery-3.3.1.min.js"></script> <!-- Common jquery plugin -->
+<script src="{% static 'js/jquery-3.3.1.min.js' %}"></script> <!-- Common jquery plugin -->
 <!--bootstrap working-->
-<script src="../static/js/bootstrap.min.js"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
 <!-- //bootstrap working-->
 <!-- disable body scroll which navbar is in active -->
 <script>
