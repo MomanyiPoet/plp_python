@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-$x@g-k_kw@x7l@*y*-p&f-!$48gr3x47vkt72t-8&ktp!a188s'
+SECRET_KEY = 'django-insecure-n0#c_kf47fe7ent-#trb8_ssj8277yxe8fiz=_ge!q#5a5eky0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main',
 ]
 
 MIDDLEWARE = [
@@ -77,14 +76,11 @@ WSGI_APPLICATION = 'ugsms.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'deldatatwo',
+        'NAME': 'deldataone',
         'USER': 'root',
         'PASSWORD': '',
         'HOST':'localhost',
         'PORT':'3306',
-        'OPTIONS':{
-            'init_command':"SET sql_mode='STRICT_TRANS_TABLES'"
-        }
     }
 }
 
