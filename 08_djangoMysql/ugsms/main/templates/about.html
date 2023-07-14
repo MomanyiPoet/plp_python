@@ -60,18 +60,16 @@
     </div>
 </section>
 
+{% for getdata in aboutDetail %}
 <section class="w3l-recent-work">
     <div class="jst-two-col">
         <div class="container">
             <div class="row">
                 <div class="my-bio col-lg-6">
                     <div class="hair-make">
-                        <h5><a href="#">About Us</a></h5>
+                        <h5><a href="#">{{getdata.pageTitle}}</a></h5>
                         <p class="para mt-2">
-                            Whether you require routine maintenance, repairs, or specialized services, 
-                            our dedicated professionals are here to ensure your vehicle performs 
-                            at its best. We understand the importance of your vehicle in your daily 
-                            life, and our goal is to keep you on the road safely and efficiently.
+                            {{getdata.pageDescription}}
                         </p>
                     </div>
                 </div>
@@ -82,5 +80,6 @@
         </div>
     </div>
 </section>
+{% endfor %}
 
 {% endblock %}
