@@ -66,12 +66,13 @@
                 <div class="map-content-9 mt-lg-0 mt-4">
                     <h3>Register with us!!</h3>
                     <form method="post" name="signup">
+                        {% csrf_token %}
 
                         <div style="padding-top: 30px;">
                             <label>First Name</label>
-                            <input type="text" class="form-control" name="firstname" id="firstname" placeholder="First Name" required="">
+                            <input type="text" class="form-control" name="username" id="username" placeholder="First Name" required="">
                         </div>
-                        <div style="padding-top: 30px;">
+                        <!-- <div style="padding-top: 30px;">
                             <label>Last Name</label>
                             <input type="text" class="form-control" name="lastname" id="lastname" placeholder="Last Name" required="">
                         </div>
@@ -82,15 +83,15 @@
                         <div style="padding-top: 30px;">
                             <label>Email address</label>
                             <input type="email" class="form-control" class="form-control" placeholder="Email address" required="" name="email">
-                        </div>
+                        </div> -->
                         <div style="padding-top: 30px;">
                             <label>Password</label>
-                            <input type="password" class="form-control" name="password" placeholder="Password" required="true">
+                            <input type="password" class="form-control" name="password" id="password" placeholder="Password" required="true">
                         </div>
-                        <div style="padding-top: 30px;">
+                        <!-- <div style="padding-top: 30px;">
                             <label>Repeat password</label>
                             <input type="password" class="form-control" name="repeatpassword" placeholder="Repeat password" required="true">
-                        </div>
+                        </div> -->
 
                         <div class="twice-two" style="padding-top: 30px;">
                             <a class="link--gray" style="color: #18461A;" href="login.php">Already Have an Account? Login</a>
