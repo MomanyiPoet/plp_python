@@ -1,0 +1,40 @@
+{% extends 'dashboard/base.html' %}
+
+{% block template %}
+    <!-- main content start-->
+    <div id="page-wrapper">
+        <div class="main-page">
+            <div class="tables">
+                <div class="table-responsive bs-example widget-shadow">
+                    <h4>Appointment Details:</h4>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Appointment Number</th>
+                                <th>Name</th>
+                                <th>Appointment Date</th>
+                                <th>Appointment Time</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>706446201</td>
+                                <td>Brian Momanyi</td>
+                                <td>2023-06-20</td>
+                                <td>11:51:55</td>
+                                <td class="font-w600">Selected</td>
+                                <td>
+                                    <a href="{% url 'moreappointmenthistory' %}" class="btn btn-primary">More Details</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
