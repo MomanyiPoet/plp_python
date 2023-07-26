@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'user/base.html' %}
 
 {% block template %}
 
@@ -14,7 +14,7 @@
     <div class="breadcrumbs-sub">
         <div class="container">
             <ul class="breadcrumbs-custom-path">
-                <li class="right-side propClone"><a href="#" class="">Home <span class="fa fa-angle-right" aria-hidden="true"></span></a> <p></li>
+                <li class="right-side propClone"><a href="{% url 'landing_page' %}" class="">Home <span class="fa fa-angle-right" aria-hidden="true"></span></a> <p></li>
                 <li class="active ">Signup</li>
             </ul>
         </div>
@@ -64,12 +64,10 @@
                     </div>
                 </div>
 
-                <!-- {% load crispy_forms_tags %} -->
+                
                 <div class="map-content-9 mt-lg-0 mt-4">
                     <h3>Register with us!!</h3>
                     <form method="POST" name="signup">
-                        <!-- {% csrf_token %}
-                        {{ form|crispy }} -->
 
                         <!-- <div style="padding-top: 30px;">
                             <label>First Name</label>

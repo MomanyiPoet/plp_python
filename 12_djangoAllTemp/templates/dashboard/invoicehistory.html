@@ -1,0 +1,38 @@
+{% extends 'dashboard/base.html' %}
+
+{% block template %}
+    <!-- main content start-->
+    <div id="page-wrapper">
+        <div class="main-page">
+            <div class="tables">
+                <div class="table-responsive bs-example widget-shadow">
+                    <h4>Invoice History:</h4>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Invoice Id</th>
+                                <th>Name</th>
+                                <th>Invoice Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>202168997</td>
+                                <td>Brian Momanyi</td>
+                                <td>2023-06-20</td>
+                                <td>
+                                    <a href="{% url 'moreinvoicehistory' %}"
+                                        class="btn btn-primary">More Details</a>
+                                </td>
+    
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

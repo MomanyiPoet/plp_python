@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UTAWALA SERVICE GARAGE MANAGEMENT SYSTEM</title>
+
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+
+    <!-- Bootstrap Core CSS -->
+    {% load static %}
+    <link href="{% static 'dashboard/css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+
+    <!-- Custom CSS -->
+    <link href="{% static 'dashboard/css/style.css' %}" rel='stylesheet' type='text/css' />
+
+    <!-- font CSS -->
+    <!-- font-awesome icons -->
+    <link href="{% static 'dashboard/css/font-awesome.css' %}" rel="stylesheet"> 
+    <!-- //font-awesome icons -->
+
+    <!-- js-->
+    <script src="{% static 'dashboard/js/jquery-1.11.1.min.js' %}"></script>
+    <script src="{% static 'dashboard/js/modernizr.custom.js' %}"></script>
+
+    <!--webfonts-->
+    <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <!--//webfonts-->
+
+    <!--animate-->
+    <link href="{% static 'dashboard/css/animate.css' %}" rel="stylesheet" type="text/css" media="all">
+    <script src="{% static 'dashboard/js/wow.min.js' %}"></script>
+        <script>
+            new WOW().init();
+        </script>
+    <!--//end-animate-->
+
+    <!-- chart -->
+    <script src="{% static 'dashboard/js/Chart.js' %}"></script>
+    <!-- //chart -->
+
+    <!--Calender-->
+    <link rel="stylesheet" href="{% static 'dashboard/css/clndr.css' %}" type="text/css" />
+    <script src="{% static 'dashboard/js/underscore-min.js' %}" type="text/javascript"></script>
+    <script src= "{% static 'dashboard/js/moment-2.2.1.js' %}" type="text/javascript"></script>
+    <script src="{% static 'dashboard/js/clndr.js' %}" type="text/javascript"></script>
+    <script src="{% static 'dashboard/js/site.js' %}" type="text/javascript"></script>
+    <!--End Calender-->
+
+    <!-- Metis Menu -->
+    <script src="{% static 'dashboard/js/metisMenu.min.js' %}"></script>
+    <script src="{% static 'dashboard/js/custom.js' %}"></script>
+    <link href="{% static 'dashboard/css/custom.css' %}" rel="stylesheet">
+    <!--//Metis Menu -->
+</head>
+<body class="cbp-spmenu-push">
+    <div class="main-content">
+
+        <!-- SIDEBAR -->
+        <div class=" sidebar" role="navigation">
+            <div class="navbar-collapse">
+                <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+                    <ul class="nav" id="side-menu">
+                        <li>
+                            <a href="{% url 'dashboard' %}"><i class="fa fa-home nav_icon"></i>Dashboard</a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'displayservices' %}"><i class="fa fa-cogs nav_icon"></i>Total Services</a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'bookappointment' %}"><i class="fa fa-check-square-o nav_icon"></i>Book Appointment</a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'appointmenthistory' %}"><i class="fa fa-check-square-o nav_icon"></i>Appointment History</a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'invoicehistory' %}"><i class="fa fa-file-text-o nav_icon"></i>Invoice History</a>
+                        </li>
+                    </ul>
+
+                    <div class="clearfix"></div>
+
+                </nav>
+            </div>
+        </div>
+
+        <!-- HEADER -->
+        <div class="sticky-header header-section ">
+            <div class="header-left">
+                <!--toggle button start-->
+                <button id="showLeftPush"><i class="fa fa-bars"></i></button>
+                <!--toggle button end-->
+
+                <!--logo -->
+                <div class="logo">
+                  <a href="{% url 'dashboard' %}">
+                    <h1>USGMS</h1>
+                    <span>Client User</span>
+                  </a>
+                </div>
+                <!--//logo-->
+
+                <div class="clearfix"> </div>
+            </div>
+
+            <div class="header-right">
+                <!--notifications of menu start -->
+                <div class="profile_details_left">
+                  <ul class="nofitications-dropdown">
+                    <li class="dropdown head-dpdn">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bell"></i><span class="badge blue">5</span></a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <div class="notification_header">
+                            <h3>You have 5 new notification</h3>
+                          </div>
+                        </li>
+                        <li>
+                            <div class="notification_desc">
+                                <a class="dropdown-item" href="#">New appointment received from POET</a>
+                                <hr />
+                                <a class="dropdown-item" href="#">No New Appointment Received</a>
+                            </div>
+                            <div class="clearfix"></div>
+                            </a>
+                        </li>
+                         <li>
+                          <div class="notification_bottom">
+                            <a href="#">See all notifications</a>
+                          </div> 
+                        </li>
+                      </ul>
+                    </li> 
+                  
+                  </ul>
+                  <div class="clearfix"> </div>
+                </div>
+                <!--notification menu end -->
+
+                <div class="profile_details">
+                  <ul>
+                    <li class="dropdown profile_details_drop">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                        <div class="profile_img"> 
+                          <span class="prfil-img"><img src="{% static 'dashboard/images/admin.png' %}" alt="" width="50" height="50"> </span>
+                          <div class="user-name">
+                            <p>CLIENT 1</p>
+                            <span>USER</span>
+                          </div>
+                          <i class="fa fa-angle-down lnr"></i>
+                          <i class="fa fa-angle-up lnr"></i>
+                          <div class="clearfix"></div>  
+                        </div>  
+                      </a>
+                      <ul class="dropdown-menu drp-mnu">
+                        <li> <a href="changepassword.html"><i class="fa fa-cog"></i> Settings</a> </li> 
+                        <li> <a href="customerprofile.html"><i class="fa fa-user"></i> Profile</a> </li> 
+                        <li> <a href="#"><i class="fa fa-sign-out"></i> Logout</a> </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>  
+                <div class="clearfix"> </div> 
+            </div>
+
+            <div class="clearfix"> </div>
+        </div>
+
+        {% block template %}
+        {% endblock %}
+        
+    </div>
+
+    <!-- Classie -->
+	<script src="{% static 'dashboard/js/classie.js' %}"></script>
+	<script>
+        var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+            showLeftPush = document.getElementById( 'showLeftPush' ),
+            body = document.body;
+            
+        showLeftPush.onclick = function() {
+            classie.toggle( this, 'active' );
+            classie.toggle( body, 'cbp-spmenu-push-toright' );
+            classie.toggle( menuLeft, 'cbp-spmenu-open' );
+            disableOther( 'showLeftPush' );
+        };
+        
+
+        function disableOther( button ) {
+            if( button !== 'showLeftPush' ) {
+                classie.toggle( showLeftPush, 'disabled' );
+            }
+        }
+    </script>
+
+    <!--scrolling js-->
+	<script src="{% static 'dashboard/js/jquery.nicescroll.js' %}"></script>
+	<script src="{% static 'dashboard/js/js2/scripts.js' %}"></script>
+	<!--//scrolling js-->
+
+	<!-- Bootstrap Core JavaScript -->
+   <script src="{% static 'dashboard/js/bootstrap.js' %}"> </script>
+</body>
+</html>

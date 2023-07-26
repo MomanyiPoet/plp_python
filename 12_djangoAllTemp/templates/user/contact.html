@@ -4,10 +4,10 @@
 
 <!-- beadcrbrumbs -->
 <section class="w3l-inner-banner-main">
-    <div class="about-inner login ">
+    <div class="about-inner contact ">
         <div class="container">
             <div class="main-titles-head text-center">
-                <h3 class="header-name ">Login</h3>
+                <h3 class="header-name ">Contact Us</h3>
             </div>
         </div>
     </div>
@@ -15,7 +15,7 @@
         <div class="container">
             <ul class="breadcrumbs-custom-path">
                 <li class="right-side propClone"><a href="{% url 'landing_page' %}" class="">Home <span class="fa fa-angle-right" aria-hidden="true"></span></a> <p></li>
-                <li class="active ">Login</li>
+                <li class="active ">Contact</li>
             </ul>
         </div>
     </div>
@@ -25,6 +25,8 @@
     <div class="contact-sec	">
         <div class="container">
             <div class="d-grid contact-view">
+
+                {% for getdata in contactDetail %}
                 <div class="cont-details">
                     <div class="cont-top">
                         <div class="cont-left text-center">
@@ -32,7 +34,7 @@
                         </div>
                         <div class="cont-right">
                             <h6>Call Us</h6>
-                            <p class="para"><a href="tel:+44 99 555 42">+254 700 013 897</a></p>
+                            <p class="para"><a href="">+254 {{getdata.mobile}}</a></p>
                         </div>
                     </div>
                     <div class="cont-top margin-up">
@@ -41,7 +43,7 @@
                         </div>
                         <div class="cont-right">
                             <h6>Email Us</h6>
-                            <p class="para"><a href="mailto:example@mail.com" class="mail">momanyiturner@gmail.com</a></p>
+                            <p class="para"><a href="" class="mail">{{getdata.email}}</a></p>
                         </div>
                     </div>
                     <div class="cont-top margin-up">
@@ -50,7 +52,7 @@
                         </div>
                         <div class="cont-right">
                             <h6>Address</h6>
-                            <p class="para">Kincar Utawala , Nairobi Kenya</p>
+                            <p class="para">{{getdata.address}}</p>
                         </div>
                     </div>
                     <div class="cont-top margin-up">
@@ -59,30 +61,25 @@
                         </div>
                         <div class="cont-right">
                             <h6>Time</h6>
-                            <p class="para">8:30 am to 7:30 pm</p>
+                            <p class="para">{{getdata.timing}}</p>
                         </div>
                     </div>
                 </div>
+                {% endfor %}
 
-                
                 <div class="map-content-9 mt-lg-0 mt-4">
-                    <form method="POST">
-                        
-                        <!-- <div>
-                            <input type="text" class="form-control" name="emailcont" required="true" placeholder="Registered Email or Contact Number" required="true">
-
+                    <form method="post">
+                        <div class="twice-two">
+                            <input type="text" class="form-control" name="fname" id="fname" placeholder="First Name" required="">
+                            <input type="text" class="form-control" name="lname" id="lname" placeholder="Last Name" required="">
                         </div>
-                        <div style="padding-top: 30px;">
-                            <input type="password" class="form-control" name="password" placeholder="Password" required="true">
-
-                        </div> -->
-
-                        <div class="twice-two" style="padding-top: 30px;">
-                            <a class="link--gray" style="color: #18461A;" href="#">Forgot Password? Reset</a>
-                            <a class="link--gray" style="color: #18461A;" href="#">Don't Have an Account? Register</a>
-
+                        <div class="twice-two">
+                            <input type="text" class="form-control" placeholder="Phone" required="" name="phone" pattern="[0-9]+" maxlength="10">
+                            <input type="email" class="form-control" class="form-control" placeholder="Email" required="" name="email">
                         </div>
-                        <button type="submit" class="btn btn-contact" name="login">Login</button>
+
+                        <textarea class="form-control" id="message" name="message" placeholder="Message" required=""></textarea>
+                        <button type="submit" class="btn btn-contact" name="submit">Send Message</button>
                     </form>
                 </div>
             </div>
