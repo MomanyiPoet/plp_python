@@ -22,3 +22,9 @@ def invoicehistory(request):
 def moreinvoicehistory(request):
     return render(request, 'dashboard/moreinvoicehistory.html')
 
+def changepassword(request):
+    return render(request, 'dashboard/changepassword.html')
+
+def customerprofile(request):
+    return render(request, 'dashboard/customerprofile.html')
+

@@ -10,4 +10,6 @@ urlpatterns = [
     path('appointmenthistory/moreappointmenthistory/', views.moreappointmenthistory, name='moreappointmenthistory'),
     path('invoicehistory/', views.invoicehistory, name='invoicehistory'),
     path('invoicehistory/moreinvoicehistory', views.moreinvoicehistory, name='moreinvoicehistory'),
+    path('changepassword/', views.changepassword, name='changepassword'),
+    path('customerprofile/', views.customerprofile, name='customerprofile'),
 ]
