@@ -8,7 +8,7 @@ class aboutDetail(models.Model):
         db_table = "tblabout"
 
     def __str__(self):
-        return f'{self.pageName} - {self.pageDescription}'
+        return self.pageName
 
 class contactDetail(models.Model):
     pagename = models.CharField(max_length=20)
@@ -20,4 +20,4 @@ class contactDetail(models.Model):
         db_table = "tblcontactdetails"
     
     def __str__(self):
-        return f'{self.pagename} - {self.email} - {self.mobile} - {self.address} - {self.timing}'
+        return self.pagename
