@@ -56,6 +56,7 @@
 <body class="cbp-spmenu-push">
     <div class="main-content">
 
+        {% if user.is_authenticated %}
         <!-- SIDEBAR -->
         <div class=" sidebar" role="navigation">
             <div class="navbar-collapse">
@@ -172,6 +173,8 @@
 
         {% block template %}
         {% endblock %}
+
+        {% endif %}
         
     </div>
 

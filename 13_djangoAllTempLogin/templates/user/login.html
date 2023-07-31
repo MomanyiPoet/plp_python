@@ -64,8 +64,11 @@
                     </div>
                 </div>
                 
+                {% load crispy_forms_tags %}
                 <div class="map-content-9 mt-lg-0 mt-4">
                     <form method="POST">
+                        {% csrf_token %}
+                        {{ form|crispy }}
                         
                         <!-- <div>
                             <input type="text" class="form-control" name="emailcont" required="true" placeholder="Registered Email or Contact Number" required="true">
