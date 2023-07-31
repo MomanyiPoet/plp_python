@@ -54,9 +54,9 @@
     <!--//Metis Menu -->
 </head>
 <body class="cbp-spmenu-push">
+    {% if user.is_authenticated %}
     <div class="main-content">
 
-        {% if user.is_authenticated %}
         <!-- SIDEBAR -->
         <div class=" sidebar" role="navigation">
             <div class="navbar-collapse">
@@ -173,10 +173,11 @@
 
         {% block template %}
         {% endblock %}
-
-        {% endif %}
         
     </div>
+    {% else %}
+    <meta http-equiv="refresh" content="0; {% url 'login' %}">
+    {% endif %}
 
     <!-- Classie -->
 	<script src="{% static 'dashboard/js/classie.js' %}"></script>
