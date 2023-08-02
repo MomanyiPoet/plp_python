@@ -6,31 +6,25 @@
         <div class="main-page">
             <div class="tables">
                 <div class="table-responsive bs-example widget-shadow">
-                    <h4>Services Provided:</h4>
+                    <h4>Services Provided</h4>
                     <table class="table table-bordered">
                         <thead>
                             <tr>
                                 <th>#</th>
                                 <th>Service Name</th>
-                                <th>Service Price</th>
                                 <th>Service Description</th>
+                                <th>Service Price (Ksh)</th>
                             </tr>
                         </thead>
                         <tbody>
+                            {% for servicedisplays in servicedisplay %}
                             <tr>
                                 <th scope="row">1</th>
-                                <td>Maintenance and Tune-ups</td>
-                                <td>3000</td>
-                                <td>From oil changes to tire rotations, we offer comprehensive maintenance services to keep your vehicle running smoothly</td>
+                                <td>{{ servicedisplays.servicename }}</td>
+                                <td>{{ servicedisplays.servicedescription }}</td>
+                                <td>{{ servicedisplays.cost }}/=</td>
                             </tr>
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Diagnostic Services</td>
-                                <td>3500</td>
-                                <td>Our advanced diagnostic tools enable us to identify and resolve any issues your vehicle may be experiencing accurately</td>
-                            </tr>
+                            {% endfor %}
                         </tbody>
                     </table>
                 </div>

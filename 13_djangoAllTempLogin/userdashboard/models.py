@@ -10,3 +10,15 @@ class customerprofile(models.Model):
 
     def __str__(self):
         return f'{self.staff.username}-customerprofile'
+    
+class service_Detail(models.Model):
+    servicename = models.CharField(max_length=50)
+    servicedescription = models.CharField(max_length=200)
+    cost = models.CharField(max_length=20)
+    image = models.ImageField(default='bg23.jpg', upload_to='service_images')
+    creationdate = models.DateTimeField()
+    class Meta:
+        db_table = "tblservices"
+    
+    def __str__(self):
+        return self.servicename

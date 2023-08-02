@@ -1,10 +1,12 @@
 from django.shortcuts import render , redirect
 from django.contrib.auth.forms import UserCreationForm
 from main.models import aboutDetail, contactDetail
+from userdashboard.models import service_Detail
 from .forms import CreateUserForm
 
 # DISPLAY FROM DATABASE
 contactdisplay = contactDetail.objects.all()
+servicedisplay = service_Detail.objects.all()
 
 # Create your views here.
 
@@ -16,7 +18,10 @@ def about(request):
     return render(request, 'user/about.html',{'aboutDetail': aboutdisplay})
 
 def services(request):
-    return render(request, 'user/services.html')
+    context = {
+        'servicedisplay' : servicedisplay
+    }
+    return render(request, 'user/services.html', context)
 
 def contact(request):
     return render(request, 'user/contact.html', {'contactDetail': contactdisplay})

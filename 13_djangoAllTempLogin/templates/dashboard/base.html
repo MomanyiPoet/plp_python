@@ -147,9 +147,9 @@
                     <li class="dropdown profile_details_drop">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                         <div class="profile_img"> 
-                          <span class="prfil-img"><img src="{% static 'dashboard/images/admin.png' %}" alt="" width="50" height="50"> </span>
+                          <span class="prfil-img"><img src="{{ user.customerprofile.image.url }}" alt="" width="50" height="50"> </span>
                           <div class="user-name">
-                            <p>CLIENT 1</p>
+                            <p>{{ user.username }}</p>
                             <span>USER</span>
                           </div>
                           <i class="fa fa-angle-down lnr"></i>

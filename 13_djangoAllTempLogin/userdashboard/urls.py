@@ -12,4 +12,5 @@ urlpatterns = [
     path('invoicehistory/moreinvoicehistory', views.moreinvoicehistory, name='moreinvoicehistory'),
     path('changepassword/', views.changepassword, name='changepassword'),
     path('customerprofile/', views.customerprofile, name='customerprofile'),
+    path('customerprofile/customerprofileupdate/', views.customerprofileupdate, name='customerprofileupdate'),
 ]

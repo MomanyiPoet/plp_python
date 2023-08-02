@@ -25,38 +25,19 @@
     <div class="recent-work ">
       <div class="container">
         <div class="row about-about">
+
+            {% for servicedisplays in servicedisplay %}
             <div class="col-lg-4 col-md-6 col-sm-6 propClone">
-              <img src="../static/user/images/service2.jpg" alt="product" height="200" width="400" class="img-responsive about-me">
+              <img src="{{ servicedisplays.image.url }}" alt="product" height="200" width="400" class="img-responsive about-me">
               <div class="about-grids ">
                 <hr>
-                <h5 class="para">Maintenance and Tune-ups</h5>
-                <p class="para ">From oil changes to tire rotations, we offer comprehensive maintenance services to keep your vehicle running smoothly.</p>
-                <p class="para " style="color: #18461A;"> Cost of Service: Ksh 3000</p>
+                <h5 class="para">{{ servicedisplays.servicename }}</h5>
+                <p class="para ">{{ servicedisplays.servicedescription }}</p>
+                <p class="para " style="color: #18461A;"> Cost of Service: Ksh {{ servicedisplays.cost }}/=</p>
               </div>
             </div>
             <br>
-
-            <div class="col-lg-4 col-md-6 col-sm-6 propClone">
-                <img src="../static/user/images/service1.jpg" alt="product" height="200" width="400" class="img-responsive about-me">
-                <div class="about-grids ">
-                  <hr>
-                  <h5 class="para">Diagnostic Services</h5>
-                  <p class="para ">Our advanced diagnostic tools enable us to identify and resolve any issues your vehicle may be experiencing accurately</p>
-                  <p class="para " style="color: #18461A;"> Cost of Service: Ksh 3500</p>
-                </div>
-            </div>
-            <br>
-
-            <div class="col-lg-4 col-md-6 col-sm-6 propClone">
-                <img src="../static/user/images/service3.jpg" alt="product" height="200" width="400" class="img-responsive about-me">
-                <div class="about-grids ">
-                  <hr>
-                  <h5 class="para">Brake and Suspension</h5>
-                  <p class="para ">Trust us to keep your brakes responsive and your suspension system in optimal condition, ensuring a smooth and safe ride</p>
-                  <p class="para " style="color: #18461A;"> Cost of Service: Ksh 4000</p>
-                </div>
-            </div>
-            <br>
+            {% endfor %}
 
         </div>
       </div>
