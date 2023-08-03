@@ -44,28 +44,12 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'login' %}">Login</a>
-                            <!-- </li>
+                            </li>
+                            {% if user.is_authenticated %}
                             <li class="nav-item">
-                                <a class="nav-link" href="admin/index.php">Admin</a>
+                                <a class="nav-link" href="{% url 'dashboard' %}">Dashboard</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="book-appointment.php">Book Service</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="booking-history.php">Appointment History</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="invoice-history.php">Invoice History</a>
-                            </li>
-                                                <li class="nav-item">
-                                <a class="nav-link" href="profile.php">Profile</a>
-                            </li>
-                                                <li class="nav-item">
-                                <a class="nav-link" href="change-password.php">Setting</a>
-                            </li>
-                             <li class="nav-item">
-                                <a class="nav-link" href="logout.php">Logout</a>
-                            </li> -->
+                            {% endif %}
                         </ul>
                     </div>
                 </nav>
