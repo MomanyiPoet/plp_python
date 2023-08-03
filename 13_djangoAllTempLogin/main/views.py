@@ -2,7 +2,8 @@ from django.shortcuts import render , redirect
 from django.contrib.auth.forms import UserCreationForm
 from main.models import aboutDetail, contactDetail
 from userdashboard.models import service_Detail
-from .forms import CreateUserForm
+from .forms import CreateUserForm, contactUsForm
+from django.contrib import messages
 
 # DISPLAY FROM DATABASE
 contactdisplay = contactDetail.objects.all()
@@ -24,7 +25,18 @@ def services(request):
     return render(request, 'user/services.html', context)
 
 def contact(request):
-    return render(request, 'user/contact.html', {'contactDetail': contactdisplay})
+    if request.method == "POST":
+        formContact = contactUsForm(request.POST)
+        if formContact.is_valid():
+            formContact.save()
+            return redirect('contact')
+    else:
+        formContact = contactUsForm()
+    context = {
+        'contactDetail': contactdisplay,
+        'formContact': formContact
+    }
+    return render(request, 'user/contact.html', context)
     
 # REGISTRATION OF CLIENTS/USERS
 def signup(request):

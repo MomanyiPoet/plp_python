@@ -9,7 +9,7 @@ class customerprofile(models.Model):
     image = models.ImageField(default='avatar.jpg', upload_to='profile_images')
 
     def __str__(self):
-        return f'{self.staff.username}-customerprofile'
+        return self.staff.username
     
 class service_Detail(models.Model):
     servicename = models.CharField(max_length=50)
@@ -22,3 +22,15 @@ class service_Detail(models.Model):
     
     def __str__(self):
         return self.servicename
+    
+# class appointmentBook(models.Model):
+#     userID = models.CharField(max_length=50)
+#     aptNumber = models.CharField(max_length=200)
+#     aptDate = models.CharField(max_length=20)
+#     aptTime = models.ImageField(default='bg23.jpg', upload_to='service_images')
+#     creationdate = models.DateTimeField()
+#     class Meta:
+#         db_table = "tblservices"
+    
+#     def __str__(self):
+#         return self.servicename

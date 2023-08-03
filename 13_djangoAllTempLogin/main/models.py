@@ -21,3 +21,14 @@ class contactDetail(models.Model):
     
     def __str__(self):
         return self.pagename
+    
+class contactUs(models.Model):
+    firstname = models.CharField(max_length=20)
+    lastname = models.CharField(max_length=20)
+    mobile = models.CharField(max_length=20)
+    message = models.CharField(max_length=500)
+    class Meta:
+        db_table = "tblcontactus"
+    
+    def __str__(self):
+        return self.firstname
