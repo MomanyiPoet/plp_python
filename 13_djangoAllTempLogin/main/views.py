@@ -3,7 +3,6 @@ from django.contrib.auth.forms import UserCreationForm
 from main.models import aboutDetail, contactDetail
 from userdashboard.models import service_Detail
 from .forms import CreateUserForm, contactUsForm
-from django.contrib import messages
 
 # DISPLAY FROM DATABASE
 contactdisplay = contactDetail.objects.all()

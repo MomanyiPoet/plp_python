@@ -13,6 +13,10 @@ class service_DetailAdmin(admin.ModelAdmin):
 class customerprofileAdmin(admin.ModelAdmin):
     list_display = ('staff', 'address', 'phone')
 
+# class appointmentBookingAdmin(admin.ModelAdmin):
+#     list_display = ('staff', 'aptNumber', 'serviceDescription', 'aptDate', 'aptTime' ,'time_ordered')
+
 # Register your models here.
 admin.site.register(customerprofile, customerprofileAdmin)
 admin.site.register(service_Detail, service_DetailAdmin)
+# admin.site.register(appointmentBooking, appointmentBookingAdmin)

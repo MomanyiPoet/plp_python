@@ -11,3 +11,8 @@ class ProfileUpdateForm(forms.ModelForm):
     class Meta:
         model = customerprofile
         fields = ['address', 'phone', 'image']
+
+# class appointmentForm(forms.ModelForm):
+#     class Meta:
+#         model = appointmentBooking
+#         fields = ['aptDate', 'aptTime', 'serviceDescription']

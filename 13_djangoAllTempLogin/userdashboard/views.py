@@ -16,6 +16,16 @@ def displayservices(request):
     return render(request, 'dashboard/displayservices.html', context)
 
 def bookappointment(request):
+    # if request.method == "POST":
+    #     formApt = appointmentForm(request.POST, request.FILES, instance=request.user.appointmentBooking)
+    #     if formApt.is_valid():
+    #         formApt.save()
+    #         return redirect('appointmenthistory')
+    # else:
+    #     formApt = appointmentForm(instance=request.user.appointmentBooking)
+    # context = {
+    #     'formApt': formApt
+    # }
     return render(request, 'dashboard/bookappointment.html')
 
 def appointmenthistory(request):
